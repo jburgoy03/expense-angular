@@ -20,10 +20,15 @@ import { ItemListComponent } from './item/item-list/item-list.component';
 import { ItemDetailComponent } from './item/item-detail/item-detail.component';
 import { ItemCreateComponent } from './item/item-create/item-create.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
-import { ExpenselineListComponent } from './expenseline/expenseline-list/expenseline-list.component';
 import { ExpenselineCreateComponent } from './expenseline/expenseline-create/expenseline-create.component';
-import { ExpenselineDetailComponent } from './expenseline/expenseline-detail/expenseline-detail.component';
 import { ExpenselineEditComponent } from './expenseline/expenseline-edit/expenseline-edit.component';
+import { ExpenseLinesComponent } from './expense/expense-lines/expense-lines.component';
+import { ExpenseReviewListComponent } from './expense/expense-review-list/expense-review-list.component';
+import { ExpenseReviewItemComponent } from './expense/expense-review-item/expense-review-item.component';
+import { BoolDisplayPipe } from './misc/bool-display.pipe';
+import { EmployeeSearchPipe } from './misc/employee-search.pipe';
+import { ExpenseSearchPipe } from './misc/expense-search.pipe';
+import { SortPipe } from './misc/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -42,10 +47,15 @@ import { ExpenselineEditComponent } from './expenseline/expenseline-edit/expense
     ItemDetailComponent,
     ItemCreateComponent,
     ItemEditComponent,
-    ExpenselineListComponent,
     ExpenselineCreateComponent,
-    ExpenselineDetailComponent,
-    ExpenselineEditComponent
+    ExpenselineEditComponent,
+    ExpenseLinesComponent,
+    ExpenseReviewListComponent,
+    ExpenseReviewItemComponent,
+    BoolDisplayPipe,
+    EmployeeSearchPipe,
+    ExpenseSearchPipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule, RouterModule, FormsModule, HttpClientModule, AppRoutingModule

@@ -37,17 +37,21 @@ export class ExpenseService {
   getApproved(): Observable<Expense[]> {
     return this.http.get(`${this.baseurl}/approved`) as Observable<Expense[]>;
   }
+  
+  getReviewed(): Observable<Expense[]> {
+    return this.http.get(`${this.baseurl}/review`) as Observable<Expense[]>;
+  }
 
   approve(exp: Expense): Observable<any> {
-    return this.http.put(`${this.baseurl}/approve/${exp.id}`, exp) as Observable<any>;
+    return this.http.put(`${this.baseurl}/approved/${exp.id}`, exp) as Observable<any>;
   }
   
   reject(exp: Expense): Observable<any> {
-    return this.http.put(`${this.baseurl}/reject/${exp.id}`, exp) as Observable<any>;
+    return this.http.put(`${this.baseurl}/rejected/${exp.id}`, exp) as Observable<any>;
   }
   
-  review(exp: Expense): Observable<any> {
-    return this.http.put(`${this.baseurl}/review/${exp.id}`, exp) as Observable<any>;
+  review(id: number,  exp:Expense): Observable<any> {
+    return this.http.put(`${this.baseurl}/review/${id}`, exp) as Observable<any>;
   }
   
   payExpense(expId: number): Observable<any> {

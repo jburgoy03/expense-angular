@@ -14,10 +14,6 @@ export class ExpenselineService {
     private http: HttpClient
   ) { }
 
-  list(): Observable<ExpenseLine[]> {
-    return this.http.get(`${this.baseurl}`) as Observable<ExpenseLine[]>;
-  }
-
   get(id: number): Observable<ExpenseLine> {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<ExpenseLine>;
   }

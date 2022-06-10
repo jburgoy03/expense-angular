@@ -16,7 +16,7 @@
         </tr>
         <tr>
             <td>Admin</td>
-            <td>{{ employee.isAdmin ? "yes" : "no" }}</td>
+            <td>{{ employee.isAdmin | bool:"fr" }}</td>
         </tr>
         <tr>
             <td>Expenses Due</td>

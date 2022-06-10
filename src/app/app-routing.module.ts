@@ -8,7 +8,12 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { ExpenseCreateComponent } from './expense/expense-create/expense-create.component';
 import { ExpenseDetailComponent } from './expense/expense-detail/expense-detail.component';
 import { ExpenseEditComponent } from './expense/expense-edit/expense-edit.component';
+import { ExpenseLinesComponent } from './expense/expense-lines/expense-lines.component';
 import { ExpenseListComponent } from './expense/expense-list/expense-list.component';
+import { ExpenseReviewItemComponent } from './expense/expense-review-item/expense-review-item.component';
+import { ExpenseReviewListComponent } from './expense/expense-review-list/expense-review-list.component';
+import { ExpenselineCreateComponent } from './expenseline/expenseline-create/expenseline-create.component';
+import { ExpenselineEditComponent } from './expenseline/expenseline-edit/expenseline-edit.component';
 import { ItemCreateComponent } from './item/item-create/item-create.component';
 import { ItemDetailComponent } from './item/item-detail/item-detail.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
@@ -19,6 +24,12 @@ const routes: Routes = [
     { path: "exp/detail/:id", component: ExpenseDetailComponent },
     { path: "exp/edit/:id", component: ExpenseEditComponent },
     { path: "exp/create", component: ExpenseCreateComponent },
+    { path: "exp/lines/:id", component: ExpenseLinesComponent },
+    { path: "exp/review", component: ExpenseReviewListComponent },
+    { path: "exp/review/item/:id", component: ExpenseReviewItemComponent },
+    
+    { path: "expl/edit/:id", component: ExpenselineEditComponent },
+    { path: "expl/create/:eid", component: ExpenselineCreateComponent },
     
     { path: "item/list", component: ItemListComponent },
     { path: "item/detail/:id", component: ItemDetailComponent },

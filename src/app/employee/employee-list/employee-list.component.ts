@@ -10,6 +10,7 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeListComponent implements OnInit {
 
   employees!: Employee[];
+  searchCriteria: string = "";
 
   constructor(
     private emplsvc: EmployeeService
